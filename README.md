@@ -1,6 +1,4 @@
-# flutter_guide
-
-A new Flutter project.
+# This project is about nigeria-questionnaire
 
 ## Getting Started
 
