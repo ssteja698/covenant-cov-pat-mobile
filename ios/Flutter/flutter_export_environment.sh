@@ -1,11 +1,3 @@
-#!/bin/sh
-# This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=/Users/bejjipuramsaisivateja/flutter"
-export "FLUTTER_APPLICATION_PATH=/Users/bejjipuramsaisivateja/flutter_apps/quesionnaire1"
-export "FLUTTER_TARGET=/Users/bejjipuramsaisivateja/flutter_apps/quesionnaire1/lib/main.dart"
-export "FLUTTER_BUILD_DIR=build"
-export "SYMROOT=${SOURCE_ROOT}/../build/ios"
-export "FLUTTER_FRAMEWORK_DIR=/Users/bejjipuramsaisivateja/flutter/bin/cache/artifacts/engine/ios"
-export "FLUTTER_BUILD_NAME=1.0.0"
-export "FLUTTER_BUILD_NUMBER=1"
-export "TRACK_WIDGET_CREATION=true"
+version https://git-lfs.github.com/spec/v1
+oid sha256:846a18f39d07ab57bcabe4e8889db2e0ef93d2c45de433be76530b2fab82a1b7
+size 603
