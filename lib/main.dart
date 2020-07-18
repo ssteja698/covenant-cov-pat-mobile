@@ -17,8 +17,17 @@ class _MyAppState extends State<MyApp> {
   var isIntroPage = true;
   var title = "COVID-19 SELF TEST";
   var _responses = [];
-  String _selectedAnswer;
+  String _selectedAnswer = 'YES';
   static var country = 'Nigeria';
+  static var valuesToInitialize = [
+    'YES',
+    '20-30',
+    'India',
+    'Abia',
+    'India',
+    'YES'
+  ];
+  static var _encounteredDropdownsCount = 0;
   var description =
       "This is a COVID-19 self assessment tool that was calibrated based on WHO guidelines. It is not a diagnostic tool.";
   List<String> _languages = [
@@ -100,8 +109,7 @@ class _MyAppState extends State<MyApp> {
     {
       'questionText': 'What is your age group?',
       'image': 'q16.png',
-      'answers': ['India', 'United States of America', 'Nigeria'],
-      //  '20-30', '31-40', '41-50', '51-60', '61-65', '66 and above'],
+      'answers': ['20-30', '31-40', '41-50', '51-60', '61-65', '66 and above'],
       'isDropdown': true,
     },
     {
@@ -153,9 +161,13 @@ class _MyAppState extends State<MyApp> {
   void _answerQuestion() {
     setState(() {
       _questionIndex = _questionIndex + 1;
-      _selectedAnswer = '';
+      _encounteredDropdownsCount = _questionIndex < 17
+          ? ((questions[_questionIndex]['answers'] as List<String>)[0] == 'YES'
+              ? _encounteredDropdownsCount
+              : _encounteredDropdownsCount + 1)
+          : _encounteredDropdownsCount;
+      _selectedAnswer = valuesToInitialize[_encounteredDropdownsCount];
     });
-    (_selectedAnswer as Object).initState()
   }
 
   @override
