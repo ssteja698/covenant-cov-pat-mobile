@@ -1,4 +1,4 @@
-# This project is about nigeria-questionnaire
+# This project is about questionnaire
 
 ## Getting Started
 
